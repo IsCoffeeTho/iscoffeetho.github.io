@@ -1,0 +1,13 @@
+en:
+  home: "Home"
+  about: "About"
+  blog: "Blog"
+  contact: "Contact"
+  switch_lang: "FR"
+
+fr:
+  home: "Accueil"
+  about: "À propos"
+  blog: "Blog"
+  contact: "Contact"
+  switch_lang: "EN"

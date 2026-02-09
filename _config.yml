@@ -1,0 +1,36 @@
+timezone: Australia/Adelaide
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name
+  fr_blog:
+    output: true
+    permalink: /fr/blog/:name
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      lang_root: ""
+      lang: "en"
+  -
+    scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: "fr"
+    values:
+      lang_root: "/fr"
+      lang: "fr"
+  -
+    scope:
+      path: ""
+      type: "fr_blog"
+    values:
+      layout: "post"
+      lang_root: "/fr"
+      lang: "fr"

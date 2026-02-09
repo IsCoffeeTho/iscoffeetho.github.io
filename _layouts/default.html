@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+	<head>
+		<link rel="stylesheet" href="/static/index.css" />
+		<title>{{ page.title }} - Aaron Menadue</title>
+	</head>
+	<body>
+		<div class="page">
+			<header>
+				<nav role="navigation">
+					<a class="button" href="{{ page.lang_root }}/">{{ site.data.translations[page.lang].home }}</a>
+					<a class="button" href="{{ page.lang_root }}/about">{{ site.data.translations[page.lang].about }}</a>
+					<a class="button" href="{{ page.lang_root }}/blog">{{ site.data.translations[page.lang].blog }}</a>
+					<a class="button" href="{{ page.lang_root }}/contact">{{ site.data.translations[page.lang].contact }}</a>
+				</nav>
+				<div>
+					<a class="button" id="switch_lang_button" href="">{{ site.data.translations[page.lang].switch_lang }}</a>
+					<script>
+						window.onload = document.onload = () => {
+							const button = document.getElementById("switch_lang_button");
+							var location = window.location.pathname;
+							if (location.startsWith("/fr"))
+								location = location.slice(3);
+							else
+								location = `/fr${location}`;
+							button.href = location;
+						}
+					</script
+				</div>
+			</header>
+			<main role="main">{{ content }}</main>
+		</div>
+		<footer role="contentinfo">
+			<div></div>
+			<div>&copy; 2026 Aaron Menadue</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+---
+title: Blog Posts
+layout: default
+---
+<div class="readable">
+	{% for post in site.blog %}
+		<a href="{{ post.url }}">
+			<div class="blog-post">
+				<div>{{ post.title }}</div>
+				<div>{{ post.excerpt | strip_html }}</div>
+			</div>
+		</a>
+	{% endfor %}
+</div>
+

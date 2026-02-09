@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--serif: "Noto Serif", serif;
+	--sans-serif: "Poppins", sans-serif;
+	--monospace: "JetBrains Mono", monospace;
+
+	--foreground: #ffffff;
+	--accent-fg: #ffff85;
+	--accent-bg: #362700;
+	--background: #000;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: var(--sans-serif);
+	margin: 0px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header > * {
+	padding: 0.5em;
+	gap: 1em;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	text-transform: uppercase;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+}
+
+a.button {
+	background-color: var(--accent-fg);
+	color: var(--accent-bg);
+	text-decoration: none;
+	padding-block: 0.5em;
+	padding-inline: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--monospace);
+}
+
+code,
+pre {
+	font-family: var(--monospace);
+}
+
+footer {
+	background-color: var(--accent-bg);
+	color: var(--accent-fg);
+	font-size: 0.8em;
+}
+
+.accent {
+	color: var(--accent-fg);
+}
+
+.hero {
+	height: 720px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dead-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+article, div.readable {
+	margin-inline : auto;
+	min-width : 720px;
+	width : 50%;
+}

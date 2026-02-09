@@ -82,6 +82,7 @@ footer {
 	height: 720px;
 	display: flex;
 	justify-content: center;
+	gap : 5em;
 	align-items: center;
 }
 
@@ -96,8 +97,9 @@ footer {
 	justify-content: center;
 }
 
-article, div.readable {
-	margin-inline : auto;
-	min-width : 720px;
-	width : 50%;
+article,
+div.readable {
+	margin-inline: auto;
+	min-width: 720px;
+	width: 50%;
 }

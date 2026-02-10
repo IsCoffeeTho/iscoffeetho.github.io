@@ -3,14 +3,31 @@ title: About
 ---
 
 <div class="readable">
-	<h1>About</h1>
-	<form action="https://formkeep.com/f/b79af3012f61" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
-		<input type="hidden" name="utf8" value="✓" />
+	<h1>Contact</h1>
+	<form action="https://api.web3forms.com/submit" method="POST">
+		<input type="hidden" name="access_key" value="8ed86c00-00fe-4c64-bb7d-8bf6e9f2cb25" />
 
-		<label for="email-address">Email Address</label>
-		<input type="email" id="email-address" name="email" />
-
-		<button type="submit">Submit</button>
+		<div>
+			<span>Name</span>
+			<input type="text" name="name" placeholder="Lucian Winston" required />
+		</div>
+		<div>
+			<span>Email</span>
+			<input type="email" name="email" placeholder="l.winston@example.com" required />
+		</div>
+		<div>
+			<span>Subject</span>
+			<input type="text" name="subject" placeholder="I want to know more" required />
+		</div>
+		<div>
+			<span>Message</span>
+			<textarea
+				name="message"
+				placeholder="Your blog has compelled me to learn more about X topic. I was wondering if you could provide more insight on the matter."
+				required
+			></textarea>
+		</div>
+		<button class="button" type="submit">Send</button>
+		<p>By pressing <span class="accent">Send</span>, you agree to the <a href="/privacy">Privacy Policy</a>.</p>
 	</form>
-	
 </div>

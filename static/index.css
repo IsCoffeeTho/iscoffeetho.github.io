@@ -8,9 +8,9 @@
 	--foreground: #ffffff;
 	--accent-fg: #ffff85;
 	--accent-bg: #362700;
-	--background: #000;
-	
-	--animation-time : calc(1s / 8);
+	--background: #110;
+
+	--animation-time: calc(1s / 8);
 }
 
 body {
@@ -49,17 +49,26 @@ nav a {
 	flex-direction: column;
 }
 
-a.button {
+a {
+	color: var(--accent-fg);
+}
+
+.button {
 	background-color: var(--accent-fg);
 	color: var(--accent-bg);
 	text-decoration: none;
 	padding-block: 0.5em;
 	padding-inline: 1em;
 	box-shadow: inset 0px 0px -0.5em #000;
-	transition: box-shadow var(--animation-time), background-color var(--animation-time), color var(--animation-time);
+	border: 0px;
+	transition:
+		box-shadow var(--animation-time),
+		background-color var(--animation-time),
+		color var(--animation-time);
+	cursor: pointer;
 }
 
-a.button:hover {
+.button:hover {
 	background-color: var(--accent-bg);
 	color: var(--accent-fg);
 	box-shadow: inset 0px 0px 0.5em #000;
@@ -77,9 +86,28 @@ h6 {
 code,
 pre {
 	font-family: var(--monospace);
+	background-color: var(--background);
+	border: 1px solid var(--accent-bg);
+}
+
+code {
+	padding-inline: 0.5em;
+	border-radius: 0.5em;
+}
+
+pre {
+	padding: 1em;
+	border-radius: 1em;
+}
+
+pre > code {
+	border: none;
+	padding: 0px;
 }
 
 footer {
+	display: flex;
+	flex-direction: column;
 	background-color: var(--accent-bg);
 	color: var(--accent-fg);
 	font-size: 0.8em;
@@ -93,7 +121,7 @@ footer {
 	height: 720px;
 	display: flex;
 	justify-content: center;
-	gap : 5em;
+	gap: 5em;
 	align-items: center;
 }
 
@@ -115,15 +143,22 @@ div.readable {
 	width: 50%;
 }
 
+blockquote {
+	background-color: var(--accent-bg);
+	border-left: 3px solid var(--accent-fg);
+	margin: 0px;
+	padding-inline: 0.5em;
+}
+
 .blog-post {
 	display: flex;
 	flex-direction: column;
 	text-decoration: none;
-	padding : 1em;
-	gap : 1em;
+	padding: 1em;
+	gap: 1em;
 	background-color: var(--background);
-	color : var(--foreground);
-	border : 3px solid var(--accent-bg);
+	color: var(--foreground);
+	border: 3px solid var(--accent-bg);
 	border-radius: 1em;
 	transition: background-color var(--animation-time);
 }
@@ -132,10 +167,12 @@ div.readable {
 }
 
 .blog-post .readmore {
-	padding-inline : 0.5ch;
+	padding-inline: 0.5ch;
 	background-color: var(--accent-bg);
 	color: var(--accent-fg);
-	transition: background-color var(--animation-time), color var(--animation-time);
+	transition:
+		background-color var(--animation-time),
+		color var(--animation-time);
 }
 .blog-post:hover .readmore {
 	background-color: var(--accent-fg);
@@ -143,7 +180,7 @@ div.readable {
 }
 
 .post-title {
-	color : var(--accent-fg);
+	color: var(--accent-fg);
 	font-family: var(--monospace);
 	font-weight: 500;
 	font-size: 1.5em;
@@ -156,6 +193,48 @@ div.readable {
 }
 
 .post-excerpt {
-	font-size : 0.8em;
+	font-size: 0.8em;
 }
 
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+form > div {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	padding: 0.5em;
+	font-family: var(--sans-serif);
+	background-color: var(--background);
+	color: var(--foreground);
+	border: none;
+	border-bottom: 1px solid var(--foreground);
+}
+
+input:focus {
+	outline: none;
+	background-color: var(--accent-bg);
+	border-bottom: 1px solid var(--accent-fg);
+}
+
+textarea {
+	height: 10em;
+	padding: 0.5em;
+	font-family: var(--sans-serif);
+	background-color: var(--background);
+	color: var(--foreground);
+	border: 1px solid var(--accent-bg);
+	border-bottom: 1px solid var(--foreground);
+	resize: vertical;
+}
+
+textarea:focus {
+	outline: none;
+	background-color: var(--accent-bg);
+	border-bottom: 1px solid var(--accent-fg);
+}

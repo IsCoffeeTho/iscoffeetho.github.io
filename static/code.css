@@ -1,0 +1,49 @@
+code {
+	tab-size: 4;
+}
+
+/* Comments */
+span.c1,
+span.cm {
+	color: #699754;
+}
+
+/* Strings */
+span.dl,
+span.s2 {
+	color: #cc8f77;
+}
+
+/* String Escaped */
+span.se {
+	color: #c6aa72;
+}
+
+span.nx {
+	color: #96d5f8;
+}
+
+/* Types */
+span.nc,
+span.kr {
+	color: #45b39c;
+}
+
+/* Functions */
+span.nf {
+	color: #d7d7a6;
+}
+
+/* Keywords */
+span.k,
+span.kd {
+	color: #4f8bbf;
+}
+
+span.mh {
+	color: #b1caa4;
+}
+
+span.sr {
+	color: #b35b5b;
+}

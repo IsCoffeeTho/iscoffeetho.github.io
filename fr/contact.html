@@ -1,0 +1,33 @@
+---
+title: Contact
+---
+
+<div class="readable">
+	<h1>Contact</h1>
+	<form action="https://api.web3forms.com/submit" method="POST">
+		<input type="hidden" name="access_key" value="8ed86c00-00fe-4c64-bb7d-8bf6e9f2cb25" />
+
+		<div>
+			<span>Nom</span>
+			<input type="text" name="name" placeholder="Séraphine Pacifique" required />
+		</div>
+		<div>
+			<span>Email</span>
+			<input type="email" name="email" placeholder="s.pacifique@exemple.com" required />
+		</div>
+		<div>
+			<span>Sujet</span>
+			<input type="text" name="subject" placeholder="Ton français s'améliore!" required />
+		</div>
+		<div>
+			<span>Message</span>
+			<textarea
+				name="message"
+				placeholder="Il y a encore beaucoup de problèmes grammaticaux mais ton français s'améliore. J'espère lire davantage de vous."
+				required
+			></textarea>
+		</div>
+		<button class="button" type="submit">Envoyer</button>
+		<p>En appuyant sur <span class="accent">Envoyer</span>, vous acceptez la <a href="/fr/privacy">Politique de confidentialité</a>.</p>
+	</form>
+</div>

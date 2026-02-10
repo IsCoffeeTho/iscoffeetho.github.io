@@ -1,15 +1,19 @@
 ---
 title: Blog Posts
-layout: default
 ---
 
 <div class="readable">
 	<h1 class="accent">Blog Posts</h1>
 	{% for post in site.blog %}
 	<a href="{{ post.url }}" class="blog-post">
-		<div>{{ post.title }}</div>
-		<div>{{ post.excerpt | strip_html | normalize_whitespace }}</div>
+		<div>
+			<span class="post-title">{{ post.title }}</span>
+			<span class="post-date">&mdash; {{ post.date | date: "%b %d, %y" }}</span>
+		</div>
+		<div class="post-excerpt">
+			{{ post.excerpt | strip_html | normalize_whitespace | truncate: 160, '&hellip;' }}
+			<span class="readmore">Read more</span>
+		</div>
 	</a>
-	
 	{% endfor %}
 </div>

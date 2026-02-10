@@ -9,6 +9,8 @@
 	--accent-fg: #ffff85;
 	--accent-bg: #362700;
 	--background: #000;
+	
+	--animation-time : calc(1s / 8);
 }
 
 body {
@@ -23,6 +25,7 @@ body {
 }
 
 header {
+	background-color: var(--accent-bg);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -52,6 +55,14 @@ a.button {
 	text-decoration: none;
 	padding-block: 0.5em;
 	padding-inline: 1em;
+	box-shadow: inset 0px 0px -0.5em #000;
+	transition: box-shadow var(--animation-time), background-color var(--animation-time), color var(--animation-time);
+}
+
+a.button:hover {
+	background-color: var(--accent-bg);
+	color: var(--accent-fg);
+	box-shadow: inset 0px 0px 0.5em #000;
 }
 
 h1,
@@ -103,3 +114,48 @@ div.readable {
 	min-width: 720px;
 	width: 50%;
 }
+
+.blog-post {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	padding : 1em;
+	gap : 1em;
+	background-color: var(--background);
+	color : var(--foreground);
+	border : 3px solid var(--accent-bg);
+	border-radius: 1em;
+	transition: background-color var(--animation-time);
+}
+.blog-post:hover {
+	background-color: var(--accent-bg);
+}
+
+.blog-post .readmore {
+	padding-inline : 0.5ch;
+	background-color: var(--accent-bg);
+	color: var(--accent-fg);
+	transition: background-color var(--animation-time), color var(--animation-time);
+}
+.blog-post:hover .readmore {
+	background-color: var(--accent-fg);
+	color: var(--accent-bg);
+}
+
+.post-title {
+	color : var(--accent-fg);
+	font-family: var(--monospace);
+	font-weight: 500;
+	font-size: 1.5em;
+}
+
+.post-date {
+	font-family: var(--monospace);
+	font-weight: 500;
+	font-size: 0.8em;
+}
+
+.post-excerpt {
+	font-size : 0.8em;
+}
+

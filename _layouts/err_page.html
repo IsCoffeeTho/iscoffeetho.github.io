@@ -2,13 +2,15 @@
 <html lang="{{ page.lang }}">
 	<head>
 		<link rel="stylesheet" href="/static/index.css" />
-		<title>{{ page.title }} - Aaron Menadue</title>
+		<title>{{ page.error }} - Aaron Menadue</title>
 	</head>
 	<body>
 		<div class="page">
 			<main role="main">
 				<div class="dead-center">
-					{{ content }}
+					<h1>Error {{ page.error }}</h1>
+					<h3>Oops!</h3>
+					<center>{{ content }}</center>
 					<div>
 						<a href="/" class="button">{{ site.data.translations['en'].home }} | EN</a>
 						<a href="/fr" class="button">{{ site.data.translations['fr'].home }} | FR</a>

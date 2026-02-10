@@ -2,12 +2,17 @@
 title: Articles de blog
 ---
 <div class="readable">
+	<h1 class="accent">Articles de blog</h1>
 	{% for post in site.fr_blog %}
-		<a href="{{ post.url }}">
-			<div class="blog-post">
-				<div>{{ post.title }}</div>
-				<div>{{ post.excerpt | strip_html }}</div>
-			</div>
-		</a>
+	<a href="{{ post.url }}" class="blog-post">
+		<div>
+			<span class="post-title">{{ post.title }}</span>
+			<span class="post-date">&mdash; {{ post.date | date: "%b %d, %y" }}</span>
+		</div>
+		<div class="post-excerpt">
+			{{ post.excerpt | strip_html | normalize_whitespace | truncate: 160, '&hellip;' }}
+			<span class="readmore">Lire la suite</span>
+		</div>
+	</a>
 	{% endfor %}
 </div>
